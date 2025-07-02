@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chai Aur Javascript</title>
+</head>
+
+<body>
+    <h2>My papa</h2>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+
+<script>
+
+    let intervalId;
+
+    // clearInterval(intervalId)
+    const sayDate = function (str) {
+        console.log(str, Date.now());
+    }
+
+    document.querySelector("#start").addEventListener("click", function () {
+        intervalId = setInterval(sayDate, 1000, "New Parameter");
+         //! we can pass third parater also in setinterval also
+    })
+    document.querySelector("#stop").addEventListener("click", function () {
+        clearInterval(intervalId)
+        console.log("interval is stopped!");
+    })
+
+
+</script>
+
+</html>

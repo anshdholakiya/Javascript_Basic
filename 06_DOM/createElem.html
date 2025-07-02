@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    let div = document.createElement('div')
+    console.log(div);
+    div.className = "main"
+    div.id  = "myId"
+    div.setAttribute("title","generated title")
+    
+    // div.innerHTML = "<h1>This is Ansh</h1>"
+    const addText = document.createTextNode("Chai aur Code")
+    div.appendChild(addText)
+    
+    // div is on memory not in document
+    document.body.appendChild(div) 
+
+    div.style.backgroundColor = "green"
+    div.style.border = "10px solid black"
+    div.style.borderRadius = "100px"
+    
+ 
+</script>
+</html>
